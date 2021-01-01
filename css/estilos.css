@@ -111,13 +111,31 @@ header, main, footer{
   text-align:center;
   width:90%;
 }
+.panelImagen{
+  border:2px solid #395C92;
+  width:100%;
+}
 .panelLeyenda{
   padding:6px 0;
   text-align:justify;
 }
 .panelTitulo{
+  color:#1A3257;
   font-size:1.2em;
+  font-weight:600;
   padding:6px 0;
+}
+
+.proyectos{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  width:100%;
+}
+.proyectosEncabezado{
+  font-size:1.3em;
+  padding:6px 3px;
+  width:100%;
 }
 
 .seccion{
@@ -147,6 +165,7 @@ header, main, footer{
 }
 .seccionTitulo{
   font-size:1.4em;
+  font-weight:600;
   width:100%;
 }
 
