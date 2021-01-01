@@ -7,7 +7,7 @@
 function mostrarMenuWeb() {
   const contenedorMenu = document.querySelector("#menuWeb");
   
-  contenedorMenu.classList.toggle("menu-ocultar");
+  contenedorMenu.classList.toggle("menu-verticalOculto");
 }
 
 function main() {
