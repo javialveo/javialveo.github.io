@@ -42,6 +42,9 @@ body{
 .list{
   padding: 5px 5px 5px 20px;
 }
+.list--clear{
+  clear:both;
+}
 .list__item{
   padding:2px;
 }
@@ -198,6 +201,9 @@ body{
 .section-cv__title{
   font-size:1.2em;
   padding:5px 0;
+}
+.section-cv__title--float{
+  float:right;
 }
 
 /* Footer Styles */
