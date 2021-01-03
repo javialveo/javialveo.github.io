@@ -1,7 +1,7 @@
 /******************************
  * File: estilos.css          *
  * Author: Eduardo Alveo      *
- * Last Modified: 02-Jan-2021 *
+ * Last Modified: 03-Jan-2021 *
  ******************************/
 *{
   box-sizing:border-box;
@@ -39,9 +39,19 @@ body{
   letter-spacing:1px;
 }
 
+.list{
+  padding: 5px 5px 5px 20px;
+}
+.list__item{
+  padding:2px;
+}
+.list__item--bold{
+  font-weight:600;
+}
+
 /* Header Styles */
 .btn-menu{
-  background-color:#A02974;
+  background-color:#223451;
   cursor:pointer;
   padding:6px;
 }
@@ -84,5 +94,108 @@ body{
 }
 
 /* Content Styles */
+.card{
+  align-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.card--project{
+  width:100%;
+}
+.card__image{
+  border:6px solid #395C92;
+  border-radius:100%;
+  width:14em;
+}
+.card__image--project{
+  border-width:1px;
+  border-radius:0;
+  width:100%;
+}
+.card__title{
+  font-size:1.8em;
+  padding:6px 0;
+  text-align:center;
+  width:100%;
+}
+.card__title--project{
+  font-size:1.15em;
+}
+
+.container{
+  margin:0 auto;
+  width:90%;
+}
+.container__title{
+  font-size:1.7em;
+  font-weight:600;
+  padding:6px 0;
+  /*width:90%;*/
+}
+
+.info-card{
+  width:100%;
+}
+.info-card__link{
+  color:#406BAD;
+  font-weight:600;
+  float:left;
+  text-transform:uppercase;
+}
+.info-card__link:hover{
+  color:#223451;
+}
+.info-card__link--right{
+  float:right;
+}
+.info-card__link--tools{
+  float:none;
+  text-transform:lowercase;
+}
+
+.info-card__tag{
+  font-weight:600;
+  padding:5px 0;
+}
+.info-card__tag--project{
+  font-weight:500;
+  text-align:justify;
+  width:100%;
+}
+.section{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+}
+.section__title{
+  font-size:1.4em;
+  padding:5px 0;
+  width:100%;
+}
 
 /* Footer Styles */
+.footer{
+  background-color:#395C92;
+  color:white;
+}
+.footer__legal{
+  padding:10px 0;
+  text-align:center;
+  width:100%;
+}
+.footer__link{
+  background-color:#223451;
+  border-radius:6px;
+  display:block;
+  margin:10px 2em;
+  padding:10px;
+}
+.footer__link:hover{
+  background-color:#2F81D3;
+}
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
