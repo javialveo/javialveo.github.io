@@ -1,19 +1,19 @@
-/*********************************
- * Archivo: javialveo.js         *
- * Autor: Eduardo Alveo          *
- * Fecha-Modificado: 30-Dic-2020 *
- *********************************/
+/******************************
+ * File: javialveo.js         *
+ * Author: Eduardo Alveo      *
+ * Last Modified: 02-Jan-2021 *
+ ******************************/
 
-function mostrarMenuWeb() {
-  const contenedorMenu = document.querySelector("#menuWeb");
+function viewMenu() {
+  const containerMenu = document.querySelector("#menuWeb");
   
-  contenedorMenu.classList.toggle("menu-verticalOculto");
+  containerMenu.classList.toggle("menu--hide");
 }
 
 function main() {
-  const botonMenu = document.querySelector("#botonMenu");
+  const buttonMenu = document.querySelector("#buttonMenu");
   
-  botonMenu.addEventListener("click", mostrarMenuWeb);
+  buttonMenu.addEventListener("click", viewMenu);
 }
 
 main();

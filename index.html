@@ -1,151 +1,34 @@
 <!DOCTYPE html>
-<!--********************************
-  ** Archivo: index.html           *
-  ** Autor: Eduardo Alveo          *
-  ** Fecha-Modificado: 01-Ene-2020 *
-  ********************************-->
-<html lang="es">
+<!--*****************************
+  ** File: index.html           *
+  ** Author: Eduardo Alveo      *
+  ** Last Modified: 02-Jan-2021 *
+  *****************************-->
+<html lang="es-PA">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="img/img01l1.png">
-    <link rel="stylesheet" href="css/estilos.css?01">
+    <link rel="stylesheet" href="css/estilos.css?v03">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JaviAlveo</title>
   </head>
   <body>
-    <header class="cabecera">
-      <h1 class="cabeceraTitulo">JaviAlveo</h1>
-      <button id="botonMenu" class="boton boton-menu">
-        <span class="botonIcono"></span>
-        <span class="botonIcono"></span>
-        <span class="botonIcono"></span>
+    <header class="header">
+      <h1 class="header__title">JaviAlveo</h1>
+      
+      <button id="buttonMenu" class="btn-menu">
+        <span class="btn-menu__icon"></span>
+        <span class="btn-menu__icon"></span>
+        <span class="btn-menu__icon"></span>
       </button>
-      <nav id="menuWeb" class="menu menu-vertical menu-verticalOculto">
-        <a class="menuEnlace menuEnlace-activo" href="index.html">inicio</a>
-        <!--a class="menuEnlace" href="#">hoja de vida</a>
-        <a class="menuEnlace" href="#">proyectos</a>
+      
+      <nav id="menuWeb" class="menu menu--hide">
+        <a class="menu__link menu__link--active" href="index.html">inicio</a>
+        <a class="menu__link" href="javicv.html">hoja de vida</a>
+        <!--a class="menuEnlace" href="#">proyectos</a>
         <a class="menuEnlace" href="#">contactar</a-->
       </nav>
     </header>
-    
-    <main>
-      <section class="seccion">
-        <div class="tarjeta">
-          <img class="tarjetaImagen" src="img/img02j1.png" title="Retrato fotográfico de Eduardo Alveo">
-          <div class="info">
-            <h2 class="infoEncabezado">Eduardo J Alveo</h2>
-            <p class="infoParrafo">Sobre Mí</p>
-            <ul class="lista">
-              <li class="listaItem"><span class="listaResaltado">Profesión:</span> Almacenista, Maquetador Web y Programador</li>
-              <li class="listaItem"><span class="listaResaltado">Programación:</span> JavaScript, HTML y CSS</li>
-              <li class="listaItem"><span class="listaResaltado">Idioma:</span> Español, Inglés (Básico)</li>
-              <li class="listaItem"><span class="listaResaltado">Religión:</span> Cristiano Católico Romano</li>
-              <li class="listaItem"><span class="listaResaltado">Deporte:</span> Béisbol</li>
-              <li class="listaItem"><span class="listaResaltado">Apasionado Por:</span> El Código Abierto y Linux (GNU/Linux)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      
-      <section class="seccion">
-        <h3 class="seccionTitulo">Proyectos</h3>
-        
-        <div class="proyectos">
-          <h4 class="proyectosEncabezado">Personales</h4>
-          <div class="panel">
-            <h5 class="panelTitulo">javialveo.github.io</h5>
-            <img class="panelImagen" src="img/img03p1.png" alt="Captura del sitio web JaviAlveo">
-            <p class="panelLeyenda">
-              Sitio web personal desarrollado en HTML, CSS y JavaScript.
-            </p>
-            <p class="panelLeyenda">
-              Visita: <a class="seccionEnlace seccionEnlace-panel" href="https://javialveo.github.io/" target="_blank" title="Enlace a la web del proyecto JaviAlveo">javialveo.github.io</a><br>
-              Visita el repositorio: <a class="seccionEnlace seccionEnlace-panel" href="https://github.com/javialveo/javialveo.github.io" target="_blank" title="Enlace al repositorio del proyecto JaviAlveo">GitHub</a>
-            </p>
-          </div>
-          
-          <!-- Proyecto JaviColorPicker -->
-          <div class="panel">
-            <h5 class="panelTitulo">JaviColorPicker</h5>
-            <img class="panelImagen" src="img/img03p2.png" alt="Captura del sitio web JaviColorPicker">
-            <p class="panelLeyenda">
-              Sencillo selector de color, desarrollado en HTML, CSS y JavaScript.
-            </p>
-            <p class="panelLeyenda">
-              Visita: <a class="seccionEnlace seccionEnlace-panel" href="https://javicolorpicker.netlify.app/" target="_blank" title="Enlace a la web del proyecto JaviColorPicker">javicolorpicker.netlify.app</a><br>
-              Visita el repositorio: <a class="seccionEnlace seccionEnlace-panel" href="https://github.com/javialveo/javicolorpicker" target="_blank" title="Enlace al repositorio del proyecto JaviColorPicker">GitHub</a>
-            </p>
-          </div>
-        </div>
-      </section>
-      
-      <section class="seccion">
-        <h3 class="seccionTitulo">Herramientas Favoritas</h3>
-        <!-- Seccion Panel -  Debian 10 -->
-        <div class="panel">
-          <h4 class="panelTitulo">Debian 10</h4>
-          <img class="panelLogo" src="img/img04app1.png">
-          <p class="panelLeyenda">
-            Sistema Operativo de código abierto, desarrollado y mantenido por la comunidad Debian.
-            Se compone del kernel o núcleo Linux y herramientas del sistema operativo GNU, dandole el nombre de 
-            Debian GNU/Linux.
-          </p>
-          <p class="panelLeyenda">
-            Para más información visita: <a class="seccionEnlace seccionEnlace-panel" href="https://www.debian.org/" target="_blank" title="Enlace al sitio web del proyecto Debian">www.debian.org</a>
-          </p>
-        </div>
-        
-        <!-- Seccion Panel - Escritorio Mate -->
-        <div class="panel">
-          <h4 class="panelTitulo">Escritorio Mate</h4>
-          <img class="panelLogo" src="img/img04app2.png">
-          <p class="panelLeyenda">
-            Entorno de Escritorio de código abierto para los sistemas operativos GNU/Linux y Unix-Like (como FreeBSD).
-            Utiliza la biblioteca GTK+3 y es una bifurcación del proyecto GNOME 2. El proyecto surge por el descontento 
-            de la comunidad con el proyecto GNOME 3 y su GNOME-Shell.
-          </p>
-          <p class="panelLeyenda">
-            Para más información visita: <a class="seccionEnlace seccionEnlace-panel" href="https://mate-desktop.org/es/" target="_blank" title="Enlace a la web del proyecto Mate-Desktop">mate-desktop.org</a>
-          </p>
-        </div>
-        
-        <!-- Seccion Panel - IDE Geany -->
-        <div class="panel">
-          <h4 class="panelTitulo">Geany</h4>
-          <img class="panelLogo" src="img/img04app3.svg">
-          <p class="panelLeyenda">
-            Es un sencillo IDE de código abierto que cuenta con: un sencillo gestor de proyectos, resaltado de sintaxis, 
-            selector de color, soporte para plugins, reconocimiento de lenguajes de programación, lenguajes de script y 
-            lenguajes de etiquetas o marcado.
-          </p>
-          <p class="panelLeyenda">
-            Para más información visita: <a class="seccionEnlace seccionEnlace-panel" href="https://www.geany.org/" target="_blank" title="Enlace a la web del proyecto Geany">www.geany.org</a>
-          </p>
-        </div>
-        
-        <!-- Seccion Panel - Navegador Firefox -->
-        <div class="panel">
-          <h4 class="panelTitulo">Firefox</h4>
-          <img class="panelLogo" src="img/img04app4.png">
-          <p class="panelLeyenda">
-            Navegador web de código abierto, desarrollado y mantenido por Mozilla Fundation y subsidiada por
-            Mozilla Corporation, estád disponible para una variedad de plataformas, 
-            cuenta con dos versiones: una versión con soporte extendido o ESR y la versión release.
-          </p>
-          <p class="panelLeyenda">
-            Para más información visita: <a class="seccionEnlace seccionEnlace-panel" href="https://www.mozilla.org/es-MX/" target="_blank" title="Enlace a la web del proyecto Firefox">www.mozilla.org</a>
-          </p>
-        </div>
-      </section>
-    </main>
-    
-    <footer class="piePagina">
-      <div class="seccion seccion-pie">
-        <a class="seccionEnlace seccionEnlace-pie" href="https://github.com/javialveo/" target="_blank" title="Enlace a mi perfil de GitHub">GitHub</a>
-        <a class="seccionEnlace seccionEnlace-pie" href="https://gitlab.com/javialveo" target="_blank" title="Enlace a mi perfil de GitLab">GitLab</a>
-        <p class="seccionParrafo seccionParrafo-pie">&copy;2020-2021 Eduardo J Alveo. Derechos Reservados</p>
-      </div>
-    </footer>
     
     <script src="js/javialveo.js"></script>
   </body>
