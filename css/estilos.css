@@ -125,6 +125,7 @@ body{
 
 .container{
   margin:0 auto;
+  padding:5px 0;
   width:90%;
 }
 .container__title{
@@ -198,4 +199,21 @@ body{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+}
+
+/* Media Query Configuration */
+@media screen and (min-width:665px){
+  .info-card--card{
+    width:auto;
+  }
+  .card--project{
+    width:38%;
+    margin-right:1em;
+  }
+}
+
+@media screen and (min-width:1000px){
+  .card--project{
+    width:20%;
+  }
 }
