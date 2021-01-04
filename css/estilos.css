@@ -42,6 +42,9 @@ body{
 .list{
   padding: 5px 5px 5px 20px;
 }
+.list--card{
+  list-style-type:none;
+}
 .list--clear{
   clear:both;
 }
