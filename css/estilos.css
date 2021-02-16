@@ -1,19 +1,18 @@
 /******************************
  * File: estilos.css          *
  * Author: Eduardo Alveo      *
- * Last Modified: 03-Jan-2021 *
+ * Last Modified: 16-Feb-2021 *
  ******************************/
 *{
   box-sizing:border-box;
 }
 
 /* Reset Styles */
-body, header, main, footer,
-div, section, article, nav, aside,
-h1, h2, h3, h4, h5, h5, h6,
+body, header, main, footer, div, section, article, aside, nav,
+h1, h2, h3, h4, h5, h6,
 p, ul, li,
-span, a, img, button,
-form, input, label{
+a, span, img,
+button{
   font:inherit;
   font-size:100%;
   margin:0;
@@ -22,9 +21,10 @@ form, input, label{
 
 a{
   color:inherit;
-  outline:none;
   text-decoration:none;
+  outline:none;
 }
+
 button{
   background-color:transparent;
   border:none;
@@ -32,20 +32,22 @@ button{
   outline:none;
 }
 
-/* General Styles */
 body{
+  color:#2E3436;
+  display:grid;
   font-family:Liberation Sans, Arial, sans-serif;
   font-size:13px;
+  grid-gap:10px;
+  grid-template:"header header  header"
+                ".      sectionA ."
+                ".      sectionB ."
+                ".      sectionC ."
+                "footer footer  footer";
   letter-spacing:1px;
 }
 
 .list{
-  padding: 5px 5px 5px 20px;
-}
-.list--card{
-  list-style-type:none;
-}
-.list--clear{
+  padding:5px 5px 5px 20px;
   clear:both;
 }
 .list__item{
@@ -55,9 +57,9 @@ body{
   font-weight:600;
 }
 
-/* Header Styles */
+/* header configuration */
 .btn-menu{
-  background-color:#223451;
+  background-color:#729FCF;
   cursor:pointer;
   padding:6px;
 }
@@ -70,10 +72,11 @@ body{
 }
 
 .header{
-  background-color:#395C92;
+  background-color:#204A87;
   color:white;
   display:flex;
   flex-wrap:wrap;
+  grid-area:header;
   justify-content:space-between;
   position:sticky;
   top:0;
@@ -84,9 +87,8 @@ body{
 }
 
 .menu{
-  display:grid;
-  grid-template-rows:repeat(2, 1fr);
-  row-gap:1px;
+  display:flex;
+  flex-direction:column;
   width:100%;
 }
 .menu--hide{
@@ -96,125 +98,134 @@ body{
   display:block;
   padding:12px;
   text-transform:capitalize;
+  border-top:1px solid #204A87;
 }
 .menu__link--active, .menu__link:hover, .btn-menu:hover{
   background-color:#2F81D3;
 }
 
-/* Content Styles */
+/* Content Configuration */
 .card{
-  align-items:center;
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+  flex-direction:column;
 }
-.card--project{
-  width:100%;
+.card--desktop{
+  grid-area:desktop;
+}
+.card--internetBrowser{
+  grid-area:internetBrowser;
+}
+.card--os{
+  grid-area:os;
+}
+.card--projectA{
+  grid-area:projectA;
+}
+.card--projectB{
+  grid-area:projectB;
+}
+.card--projectC{
+  grid-area:projectC;
+}
+.card--textEditor{
+  grid-area:textEditor;
+}
+.card__description{
+  margin:0 auto;
+  padding:5px 0;
+  text-align:justify;
+  width:95%
 }
 .card__image{
-  border:6px solid #395C92;
-  border-radius:100%;
-  width:14em;
+  padding:2px;
 }
 .card__image--project{
-  border-width:1px;
-  border-radius:0;
-  width:100%;
+  border:1px solid #204A87;
+  width:90%;
+}
+.card__link{
+  color:#3465A4;
+}
+.card__link:hover, .card__link:active{
+  color:#204A87;
+}
+.card__link--projects{
+  display:inline-block;
+  text-align:center;
+  text-transform:uppercase;
+  width:49%;
+}
+.card__picture-box{
+  text-align:center;
 }
 .card__title{
-  font-size:1.8em;
-  padding:6px 0;
+  font-size:1.20em;
+  padding:5px 0;
   text-align:center;
-  width:100%;
-}
-.card__title--project{
-  font-size:1.15em;
 }
 
 .container{
-  margin:0 auto;
-  padding:5px 0;
-  width:90%;
+  display:grid;
+  grid-gap:10px;
 }
-.container--cv{
-  width:95%;
+.container--presentation{
+  grid-area:sectionA;
+  grid-template:"title"
+                "picture"
+                "description" /
+                auto;
+}
+.container--projects{
+  grid-area:sectionB;
+  grid-template:"title"
+                "projectA"
+                "projectB"
+                "projectC" /
+                1fr;
+}
+.container--tools{
+  grid-area:sectionC;
+  grid-template:"title"
+                "os"
+                "desktop"
+                "textEditor"
+                "internetBrowser";
+}
+.container__description{
+  grid-area:description;
+}
+.container__description-tag{
+  font-weight:600;
+}
+.container__picture{
+  grid-area:picture;
+  text-align:center;
+}
+.container__picture-image{
+  border:6px solid #204A87;
+  border-radius:100%;
+  width:14em;
 }
 .container__title{
-  font-size:1.7em;
-  font-weight:600;
-  padding:6px 0;
-  /*width:90%;*/
+  font-size:1.8em;
+  grid-area:title;
+  text-align:center;
+}
+.container__title--section{
+  font-size:1.5em;
+  text-align:left;
 }
 
-.info-card{
-  width:100%;
+/* footer configuration */
+.footer{
+  background-color:#204A87;
+  color:white;
+  grid-area:footer;
 }
-.info-card__link{
-  color:#406BAD;
-  font-weight:600;
-  float:left;
-  text-transform:uppercase;
-}
-.info-card__link:hover{
-  color:#223451;
-}
-.info-card__link--right{
-  float:right;
-}
-.info-card__link--tools{
-  float:none;
-  text-transform:lowercase;
-}
-
-.info-card__tag{
-  font-weight:600;
-  padding:5px 0;
-}
-.info-card__tag--project{
-  font-weight:500;
-  text-align:justify;
-  width:100%;
-}
-.section{
+.footer-container{
   display:flex;
   flex-wrap:wrap;
-  justify-content:space-around;
-}
-.section--cv{
   justify-content:center;
-}
-.section__title{
-  font-size:1.4em;
-  padding:5px 0;
-  width:100%;
-}
-
-/* Resume styles */
-.column{
-  padding:8px;
-  width:100%;
-}
-.column__title{
-  width:100%;
-}
-
-.column-cv__title{
-  font-size:1.6em;
-  font-weight:600;
-  padding:8px 0;
-}
-.section-cv__title{
-  font-size:1.2em;
-  padding:5px 0;
-}
-.section-cv__title--float{
-  float:right;
-}
-
-/* Footer Styles */
-.footer{
-  background-color:#395C92;
-  color:white;
 }
 .footer__legal{
   padding:10px 0;
@@ -222,42 +233,48 @@ body{
   width:100%;
 }
 .footer__link{
-  background-color:#223451;
+  background-color:#3465A4;
   border-radius:6px;
   display:block;
   margin:10px 2em;
   padding:10px;
 }
-.footer__link:hover{
-  background-color:#2F81D3;
-}
-.footer-container{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+.footer__link:hover, .footer__link:active{
+  background-color:#729FCF;
 }
 
-/* Media Query Configuration */
-@media screen and (min-width:665px){
-  .info-card--card{
-    width:auto;
+@media screen and (min-width:500px){
+  .container--presentation{
+    grid-template:"title title"
+                  "picture description" /
+                  auto;
   }
-  .card--project{
-    width:38%;
-    margin-right:1em;
+  .container--projects{
+    grid-template:"title    title"
+                  "projectA projectB"
+                  "projectC ." /
+                  1fr       1fr;
+  }
+  .container--tools{
+    grid-template:"title      title"
+                  "os         desktop "
+                  "textEditor internetBrowser" /
+                  1fr         1fr;
+  }
+  .container__picture{
+    text-align:right;
   }
 }
 
-@media screen and (min-width:1000px){
-  .card--project{
-    width:20%;
+@media screen and (min-width:800px){
+  .container--projects{
+    grid-template:"title title    title    title    title"
+                  ".     projectA projectB projectC ." /
+                  1fr    auto     auto     auto     1fr;
   }
-  .column{
-    width:auto;
-  }
-  .column--left{
-    background-color:#f1f1f1;
-    border:1px solid #d1d1d1;
-    margin-right:1em;
+  .container--tools{
+    grid-template:"title title   title      title"
+                  "os    desktop textEditor internetBrowser" /
+                  1fr    1fr     1fr        1fr;
   }
 }
