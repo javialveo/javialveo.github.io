@@ -2,13 +2,16 @@
 <!--*****************************
   ** File: index.html           *
   ** Author: Eduardo Alveo      *
-  ** Last Modified: 03-Jan-2021 *
+  ** Last Modified: 15-Feb-2021 *
   *****************************-->
 <html lang="es-PA">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="img/img01l1.png">
     <link rel="stylesheet" href="css/estilos.css?v03">
+    <meta name="author" content="Eduardo Alveo">
+    <meta name="description" content="Web personal de javialveo, Eduardo Alveo, programador y desarrollador front-end">
+    <meta name="keywords" content="javialveo, eduardo alveo, alveo, programador, web developer, front-end, frontend, freelance">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JaviAlveo</title>
   </head>
@@ -25,163 +28,150 @@
       <nav id="menuWeb" class="menu menu--hide">
         <a class="menu__link menu__link--active" href="index.html">&#127968; inicio</a>
         <a class="menu__link" href="javicv.html">&#128196; hoja de vida</a>
-        <!--a class="menuEnlace" href="#">proyectos</a>
-        <a class="menuEnlace" href="#">contactar</a-->
       </nav>
     </header>
     
-    <main>
-      <section class="container">
-        <div class="card">
-          <h2 class="card__title">Eduardo J Alveo</h2>
-          <img class="card__image" src="img/img02j1.png">
-          <div class="info-card info-card--card">
-            <p class="info-card__tag">Sobre Mí &#129333;&#127998; &#128175;</p>
-            <ul class="list list--card">
-              <li class="list__item"><span class="list__item--bold">&#127891; Profesión:</span> Almacenista, Maquetador Web y Programador</li>
-              <li class="list__item"><span class="list__item--bold">&#128221; Programación:</span> JavaScript, HTML y CSS</li>
-              <li class="list__item"><span class="list__item--bold">&#128483; Idioma:</span> Español, Inglés (Básico)</li>
-              <li class="list__item"><span class="list__item--bold">&#9962; Religión:</span> Cristiano Católico Romano</li>
-              <li class="list__item"><span class="list__item--bold">&#9918; Deporte:</span> Béisbol</li>
-              <li class="list__item"><span class="list__item--bold">&#128433; Apasionado Por:</span> El Código Abierto y Linux (GNU/Linux)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+    <section class="container container--presentation">
+      <h2 class="container__title">Eduardo J Alveo</h2>
       
-      <!-- Project Container -->
-      <section class="container">
-        <h3 class="container__title">Proyectos</h3>
-        
-        <!--My Professional Projects -->
-        <!--div class="section">
-          <h4 class="section__title">Profesionales</h4>
-        </div-->
-        
-        <!-- My Personal Projects -->
-        <div class="section">
-          <h4 class="section__title">&#127959; Personales</h4>
-          
-          <!-- Projects -->
-          <div class="card card--project">
-            <h5 class="card__title card__title--project">JaviAlveo</h5>
-            <img class="card__image card__image--project" src="img/img03p1.png">
-            <div class="info-card">
-              <p class="info-card__tag info-card__tag--project">Sitio web personal desarrollado en HTML, CSS y JavaScript.</p>
-              <p class="info-card__tag info-card__tag--project">
-                <a class="info-card__link" href="https://javialveo.github.io/" target="_blank" title="Enlace hacia la web del proyecto JaviAlveo">&#127758; visitar</a>
-                <a class="info-card__link info-card__link--right" href="https://github.com/javialveo/javialveo.github.io" target="_blank" title="Enlace hacia el repositorio del proyecto JaviAlveo">&#128230; repositorio</a>
-              </p>
-            </div>
-          </div>
-          
-          <div class="card card--project">
-            <h5 class="card__title card__title--project">JaviColorPicker</h5>
-            <img class="card__image card__image--project" src="img/img03p2.png">
-            <div class="info-card">
-              <p class="info-card__tag info-card__tag--project">Sencillo selector de color, desarrollado en HTML, CSS y JavaScript.</p>
-              <p class="info-card__tag info-card__tag--project">
-                <a class="info-card__link" href="https://javicolorpicker.netlify.app/" target="_blank" title="Enlace a la web del proyecto JaviColorPicker">&#127758; visitar</a>
-                <a class="info-card__link info-card__link--right" href="https://github.com/javialveo/javicolorpicker" target="_blank" title="Enlace al repositorio del proyecto JaviColorPicker">&#128230; repositorio</a>
-              </p>
-            </div>
-          </div>
-          
-          <div class="card card--project">
-            <h5 class="card__title card__title--project">ConvertIn</h5>
-            <img class="card__image card__image--project" src="img/img03p3.png">
-            <div class="info-card">
-              <p class="info-card__tag info-card__tag--project">Programa convertidor de unidades, para GNU/Linux.</p>
-              <p class="info-card__tag info-card__tag--project">
-                <!--a class="info-card__link" href="https://javicolorpicker.netlify.app/" target="_blank" title="Enlace a la web del proyecto JaviColorPicker">&#127758; visitar</a-->
-                <a class="info-card__link info-card__link--right" href="https://gitlab.com/javialveo/convertin" target="_blank" title="Enlace al repositorio del proyecto ConvertIn">&#128230; repositorio</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- My Practice Projects -->
-        <!--div class="section">
-          <h4 class="section__title">Prácticas</h4>
-        </div-->
-      </section>
+      <div class="container__picture"><img class="container__picture-image" src="img/img02j1.png" alt="retrato fotográfico de Eduardo Alveo"></div>
       
-      <!-- Favourite tool container -->
-      <section class="container">
-        <h3 class="container__title">Herramientas Favoritas</h3>
-        <div class="section">
-          <!-- Debian Project -->
-          <div class="card card--project">
-            <h4 class="card__title card__title--project">Debian 10</h4>
-            <img src="img/img04app1.png">
-            <div class="info-card">
-              <p class="info-card__tag info-card__tag--project">
-                Sistema Operativo de código abierto, desarrollado y mantenido por la comunidad Debian. 
-                Se compone del kernel o núcleo Linux y herramientas del sistema operativo GNU, 
-                dandole el nombre de Debian GNU/Linux.
-              </p>
-              <p class="info-card__tag info-card__tag--project">
-                Para más información visita: <a class="info-card__link info-card__link--tools" href="https://www.debian.org/" target="_blank" title="Enlace al sitio web del proyecto Debian">www.debian.org</a>
-              </p>
-            </div>
-          </div>
-          
-          <!-- Mate Desktop Project -->
-          <div class="card card--project">
-            <h4 class="card__title card__title--project">Escritorio Mate</h4>
-            <img src="img/img04app2.png">
-            <div class="info-card">
-              <p class="info-card__tag info-card__tag--project">
-                Entorno de Escritorio de código abierto para los sistemas operativos GNU/Linux y 
-                Unix-Like (como FreeBSD). Utiliza la biblioteca GTK+3 y es una bifurcación del proyecto GNOME 2. 
-                El proyecto surge por el descontento de la comunidad con el proyecto GNOME 3 y su GNOME-Shell.
-              </p>
-              <p class="info-card__tag info-card__tag--project">
-                Para más información visita: <a class="info-card__link info-card__link--tools" href="https://mate-desktop.org/es/" target="_blank" title="Enlace a la web del proyecto Mate-Desktop">mate-desktop.org</a>
-              </p>
-            </div>
-          </div>
-          
-          <!-- Geany IDE Project -->
-          <div class="card card--project">
-            <h4 class="card__title card__title--project">Editor || IDE Geany</h4>
-            <img src="img/img04app3.svg">
-            <div class="info-card">
-              <p class="info-card__tag info-card__tag--project">
-                Es un sencillo IDE de código abierto que cuenta con: un sencillo gestor de proyectos, 
-                resaltado de sintaxis, selector de color, soporte para plugins, reconocimiento de lenguajes 
-                de programación, lenguajes de script y lenguajes de etiquetas o marcado.
-              </p>
-              <p class="info-card__tag info-card__tag--project">
-                Para más información visita: <a class="info-card__link info-card__link--tools" href="https://www.geany.org/" target="_blank" title="Enlace a la web del proyecto Geany">www.geany.org</a>
-              </p>
-            </div>
-          </div>
-          
-          <!-- Firefox Browser Project -->
-          <div class="card card--project">
-            <h4 class="card__title card__title--project">Navegador Firefox</h4>
-            <img src="img/img04app4.png">
-            <div class="info-card">
-              <p class="info-card__tag info-card__tag--project">
-                Navegador web de código abierto, desarrollado y mantenido por Mozilla Fundation 
-                y subsidiada por Mozilla Corporation, estád disponible para una variedad de plataformas, 
-                cuenta con dos versiones: una versión con soporte extendido o ESR y la versión release.
-              </p>
-              <p class="info-card__tag info-card__tag--project">
-                Para más información visita: <a class="info-card__link info-card__link--tools" href="https://www.mozilla.org/es-MX/" target="_blank" title="Enlace a la web del proyecto Firefox">www.mozilla.org</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+      <div class="container__description">
+        <p class="container__description-tag">Sobre Mí &#129333;&#127998; &#128175;</p>
+        <ul class="list">
+          <li class="list__item">&#127891; <span class="list__item--bold">Profesión:</span> Almacenista, Estudiante</li>
+          <li class="list__item">&#128221; <span class="list__item--bold">Programación:</span> JavaScript</li>
+          <li class="list__item">&#128483; <span class="list__item--bold">Idioma:</span> Español</li>
+          <li class="list__item">&#9962; <span class="list__item--bold">Religión:</span> Cristiano Católico Romano</li>
+          <li class="list__item">&#9918; <span class="list__item--bold">Deporte:</span> Béisbol</li>
+          <li class="list__item">&#128433; <span class="list__item--bold">Apasionado Por:</span> El Código abierto y Linux (GNU/Linux)</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="container container--projects">
+      <h3 class="container__title container__title--section">Proyectos Personales</h4>
+      
+      <div class="card card--projectA">
+        <h4 class="card__title">JaviAlveo</h4>
+        
+        <div class="card__picture-box"><img class="card__image card__image--project" src="img/img03p1.png" alt="Captura de mi página web"></div>
+        
+        <p class="card__description">Sitio web personal desarrollado en HTML, CSS y JavaScript.</p>
+        
+        <p class="card__description">
+          <a class="card__link card__link--projects" href="https://javialveo.github.io/" target="_blank" title="Enlace hacia la web del proyecto JaviAlveo">&#127758; visitar</a>
+          <a class="card__link card__link--projects" href="https://github.com/javialveo/javialveo.github.io" target="_blank" title="Enlace hacia el repositorio del proyecto JaviAlveo">&#128230; repositorio</a>
+        </p>
+      </div>
+      
+      <div class="card card--projectB">
+        <h4 class="card__title">JaviColorPicker</h4>
+        
+        <div class="card__picture-box"><img class="card__image card__image--project" src="img/img03p2.png" alt="Captura de la web JaviColorPicker"></div>
+        
+        <p class="card__description">Sencillo selector de color, desarrollado en HTML, CSS y JavaScript.</p>
+        
+        <p class="card_description">
+          <a class="card__link card__link--projects" href="https://javicolorpicker.netlify.app/" target="_blank" title="Enlace a la web del proyecto JaviColorPicker">&#127758; visitar</a>
+          <a class="card__link card__link--projects" href="https://github.com/javialveo/javicolorpicker" target="_blank" title="Enlace al repositorio del proyecto JaviColorPicker">&#128230; repositorio</a>
+        </p>
+      </div>
+      
+      <div class="card card--projectC">
+        <h4 class="card__title">ConvertIn</h4>
+        
+        <div class="card__picture-box"><img class="card__image card__image--project" src="img/img03p3.png" alt="Captura del proyecto ConvertIn"></div>
+        
+        <p class="card__description">Programa convertidor de unidades, para GNU/Linux.</p>
+        
+        <p class="card__description">
+          <a class="card__link card__link--projects" href="https://gitlab.com/javialveo/convertin" target="_blank" title="Enlace al repositorio del proyecto ConvertIn">&#128230; repositorio</a>
+        </p>
+      </div>
+    </section>
+    
+    <section class="container container--tools">
+      <h3 class="container__title container__title--section">Herramientas Favoritas</h3>
+      
+      <div class="card card--os">
+        <h4 class="card__title">Debian</h4>
+        
+        <div class="card__picture-box"><img class="card__image" src="img/img04app1.png" alt="Logo del proyecto Debian"></div>
+        
+        <p class="card__description">
+          Sistema Operativo de código abierto, desarrollado y mantenido 
+          por la comunidad Debian. Se compone del kernel o núcleo Linux 
+          y herramientas del sistema operativo GNU, dandole el nombre 
+          de Debian GNU/Linux.
+        </p>
+        
+        <p class="card__description">
+          Para más información visita: 
+          <a class="card__link" href="https://www.debian.org/" target="_blank" title="Enlace al sitio web del proyecto Debian">www.debian.org</a>
+        </p>
+      </div>
+      
+      <div class="card card--desktop">
+        <h4 class="card__title">Escritorio Mate</h4>
+        
+        <div class="card__picture-box"><img class="card__image" src="img/img04app2.png" alt="Logo del proyecto Mate-Desktop"></div>
+        
+        <p class="card__description">
+          Entorno de Escritorio de código abierto para los sistemas 
+          operativos GNU/Linux y Unix-Like (como FreeBSD). Utiliza la 
+          biblioteca GTK+3 y es una bifurcación del proyecto GNOME 2. 
+          El proyecto surge por el descontento de la comunidad con el 
+          proyecto GNOME 3 y su GNOME-Shell.
+        </p>
+        
+        <p class="card__description">
+          Para más información visita:
+          <a class="card__link" href="https://mate-desktop.org/es/" target="_blank" title="Enlace a la web del proyecto Mate-Desktop">mate-desktop.org</a>
+        </p>
+      </div>
+      
+      <div class="card card--textEditor">
+        <h4 class="card__title">Editor || IDE Geany</h4>
+        
+        <div class="card__picture-box"><img class="card__image" src="img/img04app3.svg" alt="Enlace a la web del proyecto Geany"></div>
+        
+        <p class="card__description">
+          Es un sencillo IDE de código abierto que cuenta con: un 
+          sencillo gestor de proyectos, resaltado de sintaxis, selector 
+          de color, soporte para plugins, reconocimiento de lenguajes 
+          de programación, lenguajes de script y lenguajes de etiquetas 
+          o marcado.
+        </p>
+        
+        <p class="card__description">
+           Para más información visita:
+           <a class="card__link" href="https://www.geany.org/" target="_blank" title="Enlace a la web del proyecto Geany">www.geany.org</a>
+        </p>
+      </div>
+      
+      <div class="card card--internetBrowser">
+        <h4 class="card__title">Navegador Firefox</h4>
+        <div class="card__picture-box"><img class="card__image" src="img/img04app4.png" alt="Logo del proyecto Firefox"></div>
+        <p class="card__description">
+           Navegador web de código abierto, desarrollado y mantenido 
+           por Mozilla Fundation y subsidiada por Mozilla Corporation, 
+           está disponible para una variedad de plataformas, cuenta 
+           con dos versiones: una versión con soporte extendido o ESR 
+           y la versión release.
+        </p>
+        <p class="card__description">
+          Para más información visita:
+          <a class="card__link" href="https://www.mozilla.org/es-MX/" target="_blank" title="Enlace a la web del proyecto Firefox">www.mozilla.org</a>
+        </p>
+      </div>
+    </section>
     
     <footer class="footer">
       <div class="footer-container">
-        <a class="footer__link" href="https://github.com/javialveo/" target="_blank" title="Enlace a mi perfil de GitHub">&#128230; GitHub</a>
+        <a class="footer__link" href="https://github.com/javialveo" target="_blank" title="Enlace a mi perfil de GitHub">&#128230; GitHub</a>
         <a class="footer__link" href="https://gitlab.com/javialveo" target="_blank" title="Enlace a mi perfil de GitLab">&#128230; GitLab</a>
-        <p class="footer__legal">&copy;2021 Eduardo J Alveo. Derechos Reservados</p>
+        <p class="footer__legal">&copy;2021 Eduardo Alveo. Derechos Reservados</p>
       </div>
     </footer>
     
