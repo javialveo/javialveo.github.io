@@ -5,14 +5,14 @@
  ******************************/
 *{
   box-sizing:border-box;
+  /*border:1px solid red;*/
 }
 
 /* Reset Styles */
-body, header, main, footer, div, section, article, aside, nav,
+body, header, main, footer, div, article, section, nav, aside,
 h1, h2, h3, h4, h5, h6,
-p, ul, li,
-a, span, img,
-button{
+ul, li, p,
+a, span, button{
   font:inherit;
   font-size:100%;
   margin:0;
@@ -32,17 +32,11 @@ button{
   outline:none;
 }
 
+/* General Styles */
 body{
   color:#2E3436;
-  display:grid;
   font-family:Liberation Sans, Arial, sans-serif;
   font-size:13px;
-  grid-gap:10px;
-  grid-template:"header header  header"
-                ".      sectionA ."
-                ".      sectionB ."
-                ".      sectionC ."
-                "footer footer  footer";
   letter-spacing:1px;
 }
 
@@ -57,9 +51,9 @@ body{
   font-weight:600;
 }
 
-/* header configuration */
+/* Header Styles */
 .btn-menu{
-  background-color:#729FCF;
+  background-color:#3465A4;
   cursor:pointer;
   padding:6px;
 }
@@ -76,7 +70,6 @@ body{
   color:white;
   display:flex;
   flex-wrap:wrap;
-  grid-area:header;
   justify-content:space-between;
   position:sticky;
   top:0;
@@ -89,192 +82,237 @@ body{
 .menu{
   display:flex;
   flex-direction:column;
+  flex-wrap:wrap;
+  justify-content:space-between;
   width:100%;
 }
 .menu--hide{
   display:none;
 }
 .menu__link{
+  background-color:#3465A4;
+  border-top:1px solid #3465A4;
   display:block;
+  /*padding:10px 10px;*/
   padding:12px;
   text-transform:capitalize;
-  border-top:1px solid #204A87;
 }
-.menu__link--active, .menu__link:hover, .btn-menu:hover{
-  background-color:#2F81D3;
+.menu__link--active, .menu__link:hover, .menu__link:active, .btn-menu:hover{
+  background-color:#729FCF;
 }
 
-/* Content Configuration */
+/* Content styles */
 .card{
   display:flex;
-  flex-direction:column;
+  flex-wrap:wrap;
+  justify-content:space-around;
 }
-.card--desktop{
-  grid-area:desktop;
+.card--projectP1{
+  grid-area:projectP1;
 }
-.card--internetBrowser{
-  grid-area:internetBrowser;
+.card--projectP2{
+  grid-area:projectP2;
 }
-.card--os{
-  grid-area:os;
+.card--projectP3{
+  grid-area:projectP3;
 }
-.card--projectA{
-  grid-area:projectA;
+.card--tool-browser{
+  grid-area:browserTool;
 }
-.card--projectB{
-  grid-area:projectB;
+.card--tool-desktop{
+  grid-area:desktopTool;
 }
-.card--projectC{
-  grid-area:projectC;
+.card--tool-os{
+  grid-area:osTool;
 }
-.card--textEditor{
-  grid-area:textEditor;
+.card--tool-ide{
+  grid-area:ideTool;
 }
 .card__description{
-  margin:0 auto;
   padding:5px 0;
   text-align:justify;
-  width:95%
+  width:100%;
+}
+.card__description--project{
+  text-align:center;
 }
 .card__image{
-  padding:2px;
-}
-.card__image--project{
-  border:1px solid #204A87;
+  height:auto;
   width:90%;
 }
 .card__link{
-  color:#3465A4;
+  color:#436598;
 }
-.card__link:hover, .card__link:active{
-  color:#204A87;
+.card__link:hover{
+  color:#1A3E74;
 }
-.card__link--projects{
+.card__link--go{
   display:inline-block;
+  font-weight:600;
   text-align:center;
   text-transform:uppercase;
-  width:49%;
+  width:48%;
+}
+.card__link--go-hide{
+  visibility:hidden;
 }
 .card__picture-box{
   text-align:center;
 }
 .card__title{
+  color:#204A87;
   font-size:1.20em;
   padding:5px 0;
   text-align:center;
+  width:100%;
 }
 
-.container{
+.container-cv{
   display:grid;
   grid-gap:10px;
+  grid-template:"presentation"
+                "skills"
+                "education"
+                "experience";
+  margin:1em auto;
+  width:90%;
 }
-.container--presentation{
-  grid-area:sectionA;
-  grid-template:"title"
-                "picture"
-                "description" /
-                auto;
+.container-main{
+  display:grid;
+  grid-gap:20px;
+  grid-template:"presentation"
+                "projectTitle"
+                "projectP1"
+                "projectP2"
+                "projectP3"
+                "toolTitle"
+                "osTool"
+                "desktopTool"
+                "ideTool"
+                "browserTool";
+  margin:1em auto;
+  width:90%;
 }
-.container--projects{
-  grid-area:sectionB;
-  grid-template:"title"
-                "projectA"
-                "projectB"
-                "projectC" /
-                1fr;
+
+.presentation{
+  align-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  grid-area:presentation;
+  justify-content:center;
 }
-.container--tools{
-  grid-area:sectionC;
-  grid-template:"title"
-                "os"
-                "desktop"
-                "textEditor"
-                "internetBrowser";
+.presentation__description{
+  padding:5px;
 }
-.container__description{
-  grid-area:description;
-}
-.container__description-tag{
-  font-weight:600;
-}
-.container__picture{
-  grid-area:picture;
-  text-align:center;
-}
-.container__picture-image{
+.presentation__image{
   border:6px solid #204A87;
   border-radius:100%;
   width:14em;
 }
-.container__title{
+.presentation__picture{
+  text-align:right;
+}
+.presentation__title{
+  color:#204A87;
   font-size:1.8em;
-  grid-area:title;
-  text-align:center;
-}
-.container__title--section{
-  font-size:1.5em;
-  text-align:left;
-}
-
-/* footer configuration */
-.footer{
-  background-color:#204A87;
-  color:white;
-  grid-area:footer;
-}
-.footer-container{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-.footer__legal{
-  padding:10px 0;
+  padding:0 0 6px;
   text-align:center;
   width:100%;
 }
+
+.section-skills{
+  grid-area:skills;
+}
+.section-education{
+  grid-area:education;
+}
+.section-experience{
+  grid-area:experience;
+}
+.section-title--projects{
+  grid-area:projectTitle;
+}
+.section-title--tools{
+  grid-area:toolTitle;
+}
+
+.section__title{
+  color:#204A87;
+  font-size:1.6em;
+  font-weight:600;
+  padding:8px 0;
+}
+.section__subtitle{
+  color:#3465A4;
+  font-size:1.2em;
+  padding:5px 0;
+}
+.section__subtitle--date{
+  float:right;
+}
+
+/* Footer Styles */
+.footer{
+  background-color:#204A87;
+  color:white;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  padding:10px 0;
+}
+
 .footer__link{
   background-color:#3465A4;
   border-radius:6px;
+  color:white;
   display:block;
-  margin:10px 2em;
   padding:10px;
 }
 .footer__link:hover, .footer__link:active{
   background-color:#729FCF;
 }
+.footer__copy{
+  text-align:center;
+  padding:10px 0 5px;
+  width:100%;
+}
 
-@media screen and (min-width:500px){
-  .container--presentation{
-    grid-template:"title title"
-                  "picture description" /
-                  auto;
+@media screen and (min-width:600px){
+  .container-cv{
+    grid-template:"presentation presentation"
+                  "skills       education"
+                  "skills       experience" /
+                  1fr           2fr;
   }
-  .container--projects{
-    grid-template:"title    title"
-                  "projectA projectB"
-                  "projectC ." /
-                  1fr       1fr;
+  .container-main{
+    grid-template:"presentation presentation"
+                  "projectTitle projectTitle"
+                  "projectP1    projectP2"
+                  "projectP3    ."
+                  "toolTitle    toolTitle"
+                  "osTool       desktopTool"
+                  "ideTool      browserTool";
   }
-  .container--tools{
-    grid-template:"title      title"
-                  "os         desktop "
-                  "textEditor internetBrowser" /
-                  1fr         1fr;
-  }
-  .container__picture{
-    text-align:right;
+  .section-skills{
+    background-color:#F1F1F0;
+    border:1px solid #BABDB6;
+    padding:5px 0 6px 6px;
   }
 }
 
-@media screen and (min-width:800px){
-  .container--projects{
-    grid-template:"title title    title    title    title"
-                  ".     projectA projectB projectC ." /
-                  1fr    auto     auto     auto     1fr;
+@media screen and (min-width:900px){
+  .container-cv{
+    grid-template:"presentation presentation"
+                  "skills       education"
+                  "skills       experience" /
+                  auto           2fr;
   }
-  .container--tools{
-    grid-template:"title title   title      title"
-                  "os    desktop textEditor internetBrowser" /
-                  1fr    1fr     1fr        1fr;
+  .container-main{
+    grid-template:"presentation presentation presentation"
+                  "projectTitle projectTitle projectTitle"
+                  "projectP1    projectP2    projectP3"
+                  "toolTitle    toolTitle    toolTitle"
+                  "osTool       desktopTool  ideTool"
+                  "browserTool  .            .";
   }
 }
