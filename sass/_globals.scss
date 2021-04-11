@@ -4,15 +4,14 @@
 //* Last Modified: 11-Apr-2021 *
 //******************************
 
-/* Global Configuration */
-@mixin containerFlex($flexDirection, $justifyContent, $flexWrap, $aligItems) {
-  align-items: $aligItems;
-  display: flex;
-  flex-direction: $flexDirection;
-  flex-wrap: $flexWrap;
-  justify-content: $justifyContent;
+/* Body Styles */
+body{
+  font-family: Liberation Sans, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
+/* Global Configuration */
 .list{
   padding: 5px 5px 5px 20px;
   clear: both;

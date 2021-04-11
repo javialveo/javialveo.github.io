@@ -1,0 +1,32 @@
+// ******************************
+// * File: _footer.scss         *
+// * Author: Eduardo Alveo      *
+// * Last Modified: 11-Apr-2021 *
+// ******************************
+
+@use 'variables' as color;
+@use 'mixins' as ctflex;
+
+/* Footer Styles */
+.footer{
+  @include ctflex.containerFlex(row, space-around, wrap, normal);
+  background-color: color.$colorPalette3;
+  color: color.$colorPalette6;
+  padding: 10px 0;
+
+  &__link{
+    background-color: color.$colorPalette4;
+    border-radius: 6px;
+    color: color.$colorPalette6;
+    display: block;
+    padding: 10px;
+  }
+  &__link:hover, &__link:active{
+    background-color: color.$colorPalette5;
+  }
+  &__copy{
+    text-align: center;
+    padding: 10px 0 5px;
+    width: 100%;
+  }
+}

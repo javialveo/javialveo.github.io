@@ -1,0 +1,13 @@
+// ******************************
+// * File: _mixins.scss         *
+// * Author: Eduardo Alveo      *
+// * Last Modified: 11-Apr-2021 *
+// ******************************
+
+@mixin containerFlex($flexDirection, $justifyContent, $flexWrap, $aligItems) {
+  align-items: $aligItems;
+  display: flex;
+  flex-direction: $flexDirection;
+  flex-wrap: $flexWrap;
+  justify-content: $justifyContent;
+}

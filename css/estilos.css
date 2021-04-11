@@ -32,6 +32,13 @@ ul {
   outline: none;
 }
 
+/* Body Styles */
+body {
+  font-family: Liberation Sans, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
 /* Global Configuration */
 .list {
   padding: 5px 5px 5px 20px;
@@ -42,13 +49,6 @@ ul {
 }
 .list__item--bold {
   font-weight: 600;
-}
-
-/* Body Styles */
-body {
-  font-family: Liberation Sans, Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  letter-spacing: 1px;
 }
 
 /* Header Styles */

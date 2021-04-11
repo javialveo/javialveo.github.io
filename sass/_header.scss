@@ -1,0 +1,61 @@
+// ******************************
+// * File: _header.scss         *
+// * Author: Eduardo Alveo      *
+// * Last Modified: 11-Apr-2021 *
+// ******************************
+
+@use 'variables' as color;
+@use 'mixins' as ctflex;
+
+/* Header Styles */
+.btn-menu{
+  background-color: color.$colorPalette3;
+  cursor: pointer;
+  padding: 8px;
+
+  &__icon{
+    background-color: color.$colorPalette6;
+    display: block;
+    height: 3px;
+    margin-top: 4px;
+    width: 20px;
+  }
+}
+
+.header{
+  @include ctflex.containerFlex(row, space-between, wrap, center);
+  background-color: color.$colorPalette1;
+  color: color.$colorPalette6;
+
+  &__title{
+    font-size: 1.6em;
+    padding: 0 12px;
+  }
+}
+
+.menu{
+  @include ctflex.containerFlex(column, normal, wrap, normal);
+  background-color: color.$colorPalette3;
+
+  &__item{
+    text-transform: uppercase;
+  }
+  &__link{
+    display: block;
+    padding: 12px;
+  }
+  &__link--active{
+    background-color: color.$colorPalette2;
+  }
+  &__link:hover{
+    background-color: color.$colorPalette4;
+  }
+}
+
+.navbar{
+  width: 100%;
+
+  &--hide{
+    display: none;
+  }
+}
