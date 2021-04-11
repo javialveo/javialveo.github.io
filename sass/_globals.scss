@@ -1,0 +1,26 @@
+//******************************
+//* File: _globals.scss        *
+//* Author: Eduardo Alveo      *
+//* Last Modified: 11-Apr-2021 *
+//******************************
+
+/* Global Configuration */
+@mixin containerFlex($flexDirection, $justifyContent, $flexWrap, $aligItems) {
+  align-items: $aligItems;
+  display: flex;
+  flex-direction: $flexDirection;
+  flex-wrap: $flexWrap;
+  justify-content: $justifyContent;
+}
+
+.list{
+  padding: 5px 5px 5px 20px;
+  clear: both;
+
+  &__item{
+    padding: 2px;
+  }
+  &__item--bold{
+    font-weight: 600;
+  }
+}

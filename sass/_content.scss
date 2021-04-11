@@ -1,0 +1,247 @@
+//******************************
+//* File: _content.scss            *
+//* Author: Eduardo Alveo      *
+//* Last Modified: 11-Apr-2021 *
+//******************************
+
+@use 'globals';
+
+// Variables
+$colorPalette1: #0e141f;
+$colorPalette2: #273445;
+$colorPalette3: #485a6c;
+$colorPalette4: #667885;
+$colorPalette5: #95a3ab;
+$colorPalette6: white;
+
+
+/* Body Styles */
+body{
+  font-family: Liberation Sans, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* Header Styles */
+.btn-menu{
+  background-color: $colorPalette3;
+  cursor: pointer;
+  padding: 8px;
+
+  &__icon{
+    background-color: $colorPalette6;
+    display: block;
+    height: 3px;
+    margin-top: 4px;
+    width: 20px;
+  }
+}
+
+.header{
+  @include globals.containerFlex(row, space-between, wrap, center);
+  background-color: $colorPalette1;
+  color: $colorPalette6;
+
+  &__title{
+    font-size: 1.6em;
+    padding: 0 12px;
+  }
+}
+
+.menu{
+  @include globals.containerFlex(column, normal, wrap, normal);
+  background-color: $colorPalette3;
+
+  &__item{
+    text-transform: uppercase;
+  }
+  &__link{
+    display: block;
+    padding: 12px;
+  }
+  &__link--active{
+    background-color: $colorPalette2;
+  }
+  &__link:hover{
+    background-color: $colorPalette4;
+  }
+}
+
+.navbar{
+  width: 100%;
+
+  &--hide{
+    display: none;
+  }
+}
+
+/* Content Styles */
+.card{
+  @include globals.containerFlex(row, space-around, wrap, normal);
+
+  &--projectP1{
+    grid-area: projectP1;
+  }
+  &--projectP2{
+    grid-area: projectP2;
+  }
+  &--projectP3{
+    grid-area: projectP3;
+  }
+  &--tool-browser{
+    grid-area: browserTool;
+  }
+  &--tool-desktop{
+    grid-area: desktopTool;
+  }
+  &--tool-os{
+    grid-area: osTool;
+  }
+  &--tool-ide{
+    grid-area: ideTool;
+  }
+  &__description{
+    padding: 5px 0;
+    text-align: justify;
+    width: 100%;
+  }
+  &__description--project{
+    text-align: center;
+  }
+  &__image{
+    height: auto;
+    width: 90%;
+  }
+  &__link{
+    color: $colorPalette4;
+  }
+  &__link:hover{
+    color: $colorPalette2;
+  }
+  &__link--go{
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    width: 48%;
+  }
+  &__link--go-hide{
+    visibility: hidden;
+  }
+  &__picture-box{
+    text-align: center;
+  }
+  &__title{
+    color: $colorPalette2;
+    font-size: 1.20em;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.container-cv{
+  display: grid;
+  gap: 10px;
+  grid-template: "presentation"
+                 "skills"
+                 "education"
+                 "experience";
+  margin: 1em auto;
+  width: 90%;
+}
+
+.container-main{
+  @extend .container-cv;
+  gap: 20px;
+  grid-template: "presentation"
+                 "projectTitle"
+                 "projectP1"
+                 "projectP2"
+                 "projectP3"
+                 "toolTitle"
+                 "osTool"
+                 "desktopTool"
+                 "ideTool"
+                 "browserTool";
+}
+
+.presentation{
+  @include globals.containerFlex(row, center, wrap, center);
+  grid-area: presentation;
+
+  &__description{
+    padding: 5px;
+  }
+  &__image{
+    border: 6px solid $colorPalette2;
+    border-radius: 100%;
+    width: 14em;
+  }
+  &__picture{
+    text-align: right;
+  }
+  &__title{
+    color: $colorPalette1;
+    font-size: 1.8em;
+    padding: 0 0 6px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.section{
+  &-skills{
+    grid-area: skills;
+  }
+  &-education{
+    grid-area: education;
+  }
+  &-experience{
+    grid-area: experience;
+  }
+  &-title--projects{
+    grid-area: projectTitle;
+  }
+  &-title--tools{
+    grid-area: toolTitle;
+  }
+  &__title{
+    color: $colorPalette1;
+    font-size: 1.6em;
+    font-weight: 600;
+    padding: 8px 0;
+  }
+  &__subtitle{
+    color: $colorPalette2;
+    font-size: 1.2em;
+    padding: 5px 0;
+  }
+  &__subtitle--date{
+    float: right;
+  }
+}
+
+/* Footer Styles */
+.footer{
+  @include globals.containerFlex(row, space-around, wrap, normal);
+  background-color:$colorPalette3;
+  color: $colorPalette6;
+  padding: 10px 0;
+
+  &__link{
+    background-color: $colorPalette4;
+    border-radius: 6px;
+    color: $colorPalette6;
+    display: block;
+    padding: 10px;
+  }
+  &__link:hover, &__link:active{
+    background-color: $colorPalette5;
+  }
+  &__copy{
+    text-align: center;
+    padding: 10px 0 5px;
+    width: 100%;
+  }
+}

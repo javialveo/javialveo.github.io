@@ -1,0 +1,52 @@
+//******************************
+//* File: main.scss      *
+//* Author: Eduardo Alveo      *
+//* Last Modified: 11-Apr-2021 *
+//******************************
+
+@use 'reset';
+@forward 'content';
+
+/* Responsive Design */
+@media screen and (min-width:600px){
+  .menu{
+    flex-direction: row;
+  }
+  .container-cv{
+    grid-template: "presentation presentation"
+                   "skills       education"
+                   "skills       experience" /
+                   1fr           2fr;
+  }
+  .container-main{
+    grid-template: "presentation presentation"
+                   "projectTitle projectTitle"
+                   "projectP1    projectP2"
+                   "projectP3    ."
+                   "toolTitle    toolTitle"
+                   "osTool       desktopTool"
+                   "ideTool      browserTool";
+  }
+  .section-skills{
+    background-color: #F1F1F0;
+    border: 1px solid #BABDB6;
+    padding: 5px 0 6px 6px;
+  }
+}
+
+@media screen and (min-width:900px){
+  .container-cv{
+    grid-template: "presentation presentation"
+                   "skills       education"
+                   "skills       experience" /
+                   auto          2fr;
+  }
+  .container-main{
+    grid-template:"presentation presentation presentation"
+                  "projectTitle projectTitle projectTitle"
+                  "projectP1    projectP2    projectP3"
+                  "toolTitle    toolTitle    toolTitle"
+                  "osTool       desktopTool  ideTool"
+                  "browserTool  .            .";
+  }
+}

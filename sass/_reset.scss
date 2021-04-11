@@ -1,0 +1,54 @@
+//******************************
+//* File: _reset.scss          *
+//* Author: Eduardo Alveo      *
+//* Last Modified: 11-Apr-2021 *
+//******************************/
+
+/******************************
+ * File: estilos.css          *
+ * Author: Eduardo Alveo      *
+ * Last Modified: 11-Apr-2021 *
+ ******************************/
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header, main, section, footer, div, aside, article, nav{
+  @extend body;
+}
+
+h1, h2, h3, h4, h5, h6{
+  @extend body;
+}
+
+span, p, li{
+  @extend body;
+}
+
+a{
+  @extend body;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+ul{
+  @extend body;
+  list-style-type: none;
+}
+
+.btn-menu{
+  @extend body;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  outline: none;
+}
